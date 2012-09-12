@@ -1,0 +1,300 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6222EDAF1600FD4600F17058 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6222EDAE1600FD4600F17058 /* UIKit.framework */; };
+		6222EDB11600FD4600F17058 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6222EDB01600FD4600F17058 /* Foundation.framework */; };
+		6222EDB31600FD4600F17058 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6222EDB21600FD4600F17058 /* CoreGraphics.framework */; };
+		6222EDB91600FD4600F17058 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6222EDB71600FD4600F17058 /* InfoPlist.strings */; };
+		6222EDBB1600FD4600F17058 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6222EDBA1600FD4600F17058 /* main.m */; };
+		6222EDBF1600FD4600F17058 /* iQuakeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6222EDBE1600FD4600F17058 /* iQuakeAppDelegate.m */; };
+		6222EDC21600FD4600F17058 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6222EDC01600FD4600F17058 /* MainStoryboard.storyboard */; };
+		6222EDC51600FD4600F17058 /* iQuakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6222EDC41600FD4600F17058 /* iQuakeViewController.m */; };
+		6222EDCD1600FDD800F17058 /* iQuakeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6222EDCC1600FDD800F17058 /* iQuakeTableViewController.m */; };
+		6222EDD0160101E100F17058 /* iQuakeFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 6222EDCF160101E100F17058 /* iQuakeFetcher.m */; };
+		6222EDD71601071A00F17058 /* iQuakeXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6222EDD61601071A00F17058 /* iQuakeXMLParser.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6222EDAA1600FD4600F17058 /* iQuake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iQuake.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6222EDAE1600FD4600F17058 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6222EDB01600FD4600F17058 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6222EDB21600FD4600F17058 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6222EDB61600FD4600F17058 /* iQuake-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iQuake-Info.plist"; sourceTree = "<group>"; };
+		6222EDB81600FD4600F17058 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6222EDBA1600FD4600F17058 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6222EDBC1600FD4600F17058 /* iQuake-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iQuake-Prefix.pch"; sourceTree = "<group>"; };
+		6222EDBD1600FD4600F17058 /* iQuakeAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iQuakeAppDelegate.h; sourceTree = "<group>"; };
+		6222EDBE1600FD4600F17058 /* iQuakeAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iQuakeAppDelegate.m; sourceTree = "<group>"; };
+		6222EDC11600FD4600F17058 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		6222EDC31600FD4600F17058 /* iQuakeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iQuakeViewController.h; sourceTree = "<group>"; };
+		6222EDC41600FD4600F17058 /* iQuakeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iQuakeViewController.m; sourceTree = "<group>"; };
+		6222EDCB1600FDD800F17058 /* iQuakeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iQuakeTableViewController.h; sourceTree = "<group>"; };
+		6222EDCC1600FDD800F17058 /* iQuakeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iQuakeTableViewController.m; sourceTree = "<group>"; };
+		6222EDCE160101E100F17058 /* iQuakeFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iQuakeFetcher.h; sourceTree = "<group>"; };
+		6222EDCF160101E100F17058 /* iQuakeFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iQuakeFetcher.m; sourceTree = "<group>"; };
+		6222EDD51601071A00F17058 /* iQuakeXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iQuakeXMLParser.h; sourceTree = "<group>"; };
+		6222EDD61601071A00F17058 /* iQuakeXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iQuakeXMLParser.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6222EDA71600FD4600F17058 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6222EDAF1600FD4600F17058 /* UIKit.framework in Frameworks */,
+				6222EDB11600FD4600F17058 /* Foundation.framework in Frameworks */,
+				6222EDB31600FD4600F17058 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6222ED9F1600FD4600F17058 = {
+			isa = PBXGroup;
+			children = (
+				6222EDB41600FD4600F17058 /* iQuake */,
+				6222EDAD1600FD4600F17058 /* Frameworks */,
+				6222EDAB1600FD4600F17058 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6222EDAB1600FD4600F17058 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6222EDAA1600FD4600F17058 /* iQuake.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6222EDAD1600FD4600F17058 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6222EDAE1600FD4600F17058 /* UIKit.framework */,
+				6222EDB01600FD4600F17058 /* Foundation.framework */,
+				6222EDB21600FD4600F17058 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6222EDB41600FD4600F17058 /* iQuake */ = {
+			isa = PBXGroup;
+			children = (
+				6222EDBD1600FD4600F17058 /* iQuakeAppDelegate.h */,
+				6222EDBE1600FD4600F17058 /* iQuakeAppDelegate.m */,
+				6222EDC01600FD4600F17058 /* MainStoryboard.storyboard */,
+				6222EDCB1600FDD800F17058 /* iQuakeTableViewController.h */,
+				6222EDCC1600FDD800F17058 /* iQuakeTableViewController.m */,
+				6222EDC31600FD4600F17058 /* iQuakeViewController.h */,
+				6222EDC41600FD4600F17058 /* iQuakeViewController.m */,
+				6222EDB51600FD4600F17058 /* Supporting Files */,
+				6222EDCE160101E100F17058 /* iQuakeFetcher.h */,
+				6222EDCF160101E100F17058 /* iQuakeFetcher.m */,
+				6222EDD51601071A00F17058 /* iQuakeXMLParser.h */,
+				6222EDD61601071A00F17058 /* iQuakeXMLParser.m */,
+			);
+			path = iQuake;
+			sourceTree = "<group>";
+		};
+		6222EDB51600FD4600F17058 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6222EDB61600FD4600F17058 /* iQuake-Info.plist */,
+				6222EDB71600FD4600F17058 /* InfoPlist.strings */,
+				6222EDBA1600FD4600F17058 /* main.m */,
+				6222EDBC1600FD4600F17058 /* iQuake-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6222EDA91600FD4600F17058 /* iQuake */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6222EDC81600FD4600F17058 /* Build configuration list for PBXNativeTarget "iQuake" */;
+			buildPhases = (
+				6222EDA61600FD4600F17058 /* Sources */,
+				6222EDA71600FD4600F17058 /* Frameworks */,
+				6222EDA81600FD4600F17058 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iQuake;
+			productName = iQuake;
+			productReference = 6222EDAA1600FD4600F17058 /* iQuake.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6222EDA11600FD4600F17058 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = iQuake;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 6222EDA41600FD4600F17058 /* Build configuration list for PBXProject "iQuake" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6222ED9F1600FD4600F17058;
+			productRefGroup = 6222EDAB1600FD4600F17058 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6222EDA91600FD4600F17058 /* iQuake */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6222EDA81600FD4600F17058 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6222EDB91600FD4600F17058 /* InfoPlist.strings in Resources */,
+				6222EDC21600FD4600F17058 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6222EDA61600FD4600F17058 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6222EDBB1600FD4600F17058 /* main.m in Sources */,
+				6222EDBF1600FD4600F17058 /* iQuakeAppDelegate.m in Sources */,
+				6222EDC51600FD4600F17058 /* iQuakeViewController.m in Sources */,
+				6222EDCD1600FDD800F17058 /* iQuakeTableViewController.m in Sources */,
+				6222EDD0160101E100F17058 /* iQuakeFetcher.m in Sources */,
+				6222EDD71601071A00F17058 /* iQuakeXMLParser.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6222EDB71600FD4600F17058 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6222EDB81600FD4600F17058 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6222EDC01600FD4600F17058 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6222EDC11600FD4600F17058 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6222EDC61600FD4600F17058 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6222EDC71600FD4600F17058 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6222EDC91600FD4600F17058 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iQuake/iQuake-Prefix.pch";
+				INFOPLIST_FILE = "iQuake/iQuake-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6222EDCA1600FD4600F17058 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iQuake/iQuake-Prefix.pch";
+				INFOPLIST_FILE = "iQuake/iQuake-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6222EDA41600FD4600F17058 /* Build configuration list for PBXProject "iQuake" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6222EDC61600FD4600F17058 /* Debug */,
+				6222EDC71600FD4600F17058 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6222EDC81600FD4600F17058 /* Build configuration list for PBXNativeTarget "iQuake" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6222EDC91600FD4600F17058 /* Debug */,
+				6222EDCA1600FD4600F17058 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6222EDA11600FD4600F17058 /* Project object */;
+}
