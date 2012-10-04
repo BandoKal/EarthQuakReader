@@ -26,29 +26,21 @@
  POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "iQuakeViewController.h"
+#import <Foundation/Foundation.h>
+#import <MapKit/MapKit.h>
 
-@interface iQuakeViewController ()
+@interface EarthQuake : NSObject <MKAnnotation>
 
-@end
+ // attributes that are updated with the [setValueForKey:]
+@property (nonatomic, strong) NSString *title,*summary;
 
-@implementation iQuakeViewController
+// attributes we have to do something special to retrieve
+@property (nonatomic, strong) NSString *geoPoint,*magnitude,*age;
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
+// The other two attributes that we need for the MapKit Annotation (so we can map this object)
+@property (nonatomic) CLLocationCoordinate2D coordinate;
+@property (nonatomic, strong) NSString *subtitle;
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-}
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-}
 
 @end

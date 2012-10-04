@@ -31,6 +31,9 @@
 @interface iQuakeTableViewController ()
 {
     iQuakeFetcher *dataGetter;
+    iQuakeAppDelegate *appDelegate;
+    iQuakeDetailTableViewController *nextController;
+    NSIndexPath *selectedIndexPath;
 }
 
 @end
@@ -41,8 +44,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    appDelegate = (iQuakeAppDelegate*)[[UIApplication sharedApplication]delegate];
     dataGetter = [[iQuakeFetcher alloc]init];
-    self.earthQuakes = [[NSArray alloc]initWithArray:[dataGetter fetchFeedsWithURL:@"http://earthquake.usgs.gov/earthquakes/feed/atom/1.0/hour"]];
+    dataGetter.delegate = self;
+    [dataGetter fetchFeedsWithURL:@"http://earthquake.usgs.gov/earthquakes/feed/atom/2.5/day"];
 }
 
 - (void)viewDidUnload
@@ -77,26 +82,49 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     // Configure the cell...
-    cell.textLabel.text = [self.earthQuakes objectAtIndex:indexPath.row];
-
+    cell.textLabel.text = [[self.earthQuakes objectAtIndex:indexPath.row]title];
     
     
     return cell;
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier]isEqualToString:@"pushDetails"])
+    {
+        nextController = segue.destinationViewController;
+        nextController.summary = [[self.earthQuakes objectAtIndex:selectedIndexPath.row]summary];
+        nextController.myQuake = [self.earthQuakes objectAtIndex:selectedIndexPath.row];
+
+    }
+    
+}
 
 
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    selectedIndexPath = indexPath;
+    [self performSegueWithIdentifier:@"pushDetails" sender:self];
+}
+
+#pragma mark DataFecther delegate
+
+-(void)updateUIWithSender:(id)sender
+{
+    self.earthQuakes = [[NSMutableArray alloc]initWithArray:appDelegate.xmlArray];
+    [self.tableView reloadData];
+}
+
+-(void)errorWithError:(NSError *)error
+{
+    UIAlertView *errorAlert = [[UIAlertView alloc]initWithTitle:@"Error Accessing Feed"
+                                                        message:error.localizedDescription
+                                                       delegate:nil
+                                              cancelButtonTitle:@"Ok"
+                                              otherButtonTitles:nil];
+    [errorAlert show];
 }
 
 @end

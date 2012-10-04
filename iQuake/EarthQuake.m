@@ -26,8 +26,39 @@
  POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <UIKit/UIKit.h>
+#import "EarthQuake.h"
 
-@interface iQuakeViewController : UIViewController
+@implementation EarthQuake
+@synthesize title = _title;
+@synthesize summary = _summary;
+@synthesize geoPoint = _geoPoint;
+@synthesize magnitude = _magnitude;
+@synthesize age = _age;
+@synthesize coordinate = _coordinate;
+@synthesize subtitle = _subtitle;
 
+
+-(CLLocationCoordinate2D)coordinate
+{
+    // Our lat and lon values are in the geoPoint attribute
+    // formatt --> "39.7233 -119.4535"
+    
+    // String manipulations to extract the double values
+    // If there is a space between characters we get the characters
+    NSMutableArray *latLon = [[NSMutableArray alloc]initWithArray:[self.geoPoint componentsSeparatedByString:@" "]];
+    [latLon removeObject:@" "]; //just in case a string containing " " is kept in array.
+    
+    // So now we have an array that has two strings [0]{latitude} & [1]{longitude}
+    // convert to double then add to our coordinate
+    double latValue = [[latLon objectAtIndex:0]doubleValue];
+    double lonValue = [[latLon objectAtIndex:1] doubleValue];
+    
+    return CLLocationCoordinate2DMake(latValue, lonValue);    
+}
+
+-(NSString *) subtitle
+{
+    NSString *info = [NSString stringWithFormat:@"Magnitude : [%@] \nAge : [%@]" , self.magnitude, self.age];
+    return info;
+}
 @end

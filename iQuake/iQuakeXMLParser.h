@@ -27,7 +27,16 @@
  */
 
 #import <UIKit/UIKit.h>
+#import "iQuakeAppDelegate.h"
+#import "EarthQuake.h"
 
 @interface iQuakeXMLParser : NSObject
+{
+    NSMutableString *currentElementValue;
+    iQuakeAppDelegate *appDelegate;
+    id aParseObject;
+}
+
+-(iQuakeXMLParser *)initXMLParser;
 
 @end

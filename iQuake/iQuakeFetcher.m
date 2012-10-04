@@ -29,10 +29,28 @@
 #import "iQuakeFetcher.h"
 
 @implementation iQuakeFetcher
+@synthesize currentQuakes = _currentQuakes;
+@synthesize delegate = _delegate;
 
--(NSArray*)fetchFeedsWithURL: (NSString*) urlPath
+-(void)fetchFeedsWithURL: (NSString*) urlPath
 {
+    NSXMLParser *xmlParser = [[NSXMLParser alloc]initWithContentsOfURL:[NSURL URLWithString:urlPath]];
     
-    return nil;
+    iQuakeXMLParser *parser = [[iQuakeXMLParser alloc]initXMLParser];
+    
+    [xmlParser setDelegate:(id<NSXMLParserDelegate>)parser];
+    
+    BOOL success = [xmlParser parse];
+    
+    if (success)
+    {
+        [self.delegate updateUIWithSender:self];
+    }
+    else
+    {
+        
+        [self.delegate errorWithError:xmlParser.parserError ];
+    }
+    
 }
 @end

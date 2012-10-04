@@ -27,9 +27,11 @@
  */
 
 #import <UIKit/UIKit.h>
+#import "iQuakeAppDelegate.h"
 #import "iQuakeFetcher.h"
+#import "iQuakeDetailTableViewController.h"
 
-@interface iQuakeTableViewController : UITableViewController
+@interface iQuakeTableViewController : UITableViewController <DataFetcherProtocol>
 @property (strong, nonatomic) NSArray *earthQuakes;
 
 @end

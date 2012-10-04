@@ -31,6 +31,7 @@
 @implementation iQuakeAppDelegate
 
 @synthesize window = _window;
+@synthesize xmlArray = _xmlArray;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

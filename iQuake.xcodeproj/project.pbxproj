@@ -14,10 +14,13 @@
 		6222EDBB1600FD4600F17058 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6222EDBA1600FD4600F17058 /* main.m */; };
 		6222EDBF1600FD4600F17058 /* iQuakeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6222EDBE1600FD4600F17058 /* iQuakeAppDelegate.m */; };
 		6222EDC21600FD4600F17058 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6222EDC01600FD4600F17058 /* MainStoryboard.storyboard */; };
-		6222EDC51600FD4600F17058 /* iQuakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6222EDC41600FD4600F17058 /* iQuakeViewController.m */; };
 		6222EDCD1600FDD800F17058 /* iQuakeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6222EDCC1600FDD800F17058 /* iQuakeTableViewController.m */; };
 		6222EDD0160101E100F17058 /* iQuakeFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 6222EDCF160101E100F17058 /* iQuakeFetcher.m */; };
 		6222EDD71601071A00F17058 /* iQuakeXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6222EDD61601071A00F17058 /* iQuakeXMLParser.m */; };
+		625F530E161CD2CA00304E2B /* EarthQuake.m in Sources */ = {isa = PBXBuildFile; fileRef = 625F530D161CD2CA00304E2B /* EarthQuake.m */; };
+		625F5311161CD45E00304E2B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 625F5310161CD45E00304E2B /* MapKit.framework */; };
+		625F5317161CED1600304E2B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 625F5316161CED1600304E2B /* CoreLocation.framework */; };
+		625F531A161CF29A00304E2B /* iQuakeDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 625F5319161CF29A00304E2B /* iQuakeDetailTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,14 +35,18 @@
 		6222EDBD1600FD4600F17058 /* iQuakeAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iQuakeAppDelegate.h; sourceTree = "<group>"; };
 		6222EDBE1600FD4600F17058 /* iQuakeAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iQuakeAppDelegate.m; sourceTree = "<group>"; };
 		6222EDC11600FD4600F17058 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		6222EDC31600FD4600F17058 /* iQuakeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iQuakeViewController.h; sourceTree = "<group>"; };
-		6222EDC41600FD4600F17058 /* iQuakeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iQuakeViewController.m; sourceTree = "<group>"; };
 		6222EDCB1600FDD800F17058 /* iQuakeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iQuakeTableViewController.h; sourceTree = "<group>"; };
 		6222EDCC1600FDD800F17058 /* iQuakeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iQuakeTableViewController.m; sourceTree = "<group>"; };
 		6222EDCE160101E100F17058 /* iQuakeFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iQuakeFetcher.h; sourceTree = "<group>"; };
 		6222EDCF160101E100F17058 /* iQuakeFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iQuakeFetcher.m; sourceTree = "<group>"; };
 		6222EDD51601071A00F17058 /* iQuakeXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iQuakeXMLParser.h; sourceTree = "<group>"; };
 		6222EDD61601071A00F17058 /* iQuakeXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iQuakeXMLParser.m; sourceTree = "<group>"; };
+		625F530C161CD2CA00304E2B /* EarthQuake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EarthQuake.h; sourceTree = "<group>"; };
+		625F530D161CD2CA00304E2B /* EarthQuake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EarthQuake.m; sourceTree = "<group>"; };
+		625F5310161CD45E00304E2B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		625F5316161CED1600304E2B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		625F5318161CF29A00304E2B /* iQuakeDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iQuakeDetailTableViewController.h; sourceTree = "<group>"; };
+		625F5319161CF29A00304E2B /* iQuakeDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iQuakeDetailTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				625F5317161CED1600304E2B /* CoreLocation.framework in Frameworks */,
+				625F5311161CD45E00304E2B /* MapKit.framework in Frameworks */,
 				6222EDAF1600FD4600F17058 /* UIKit.framework in Frameworks */,
 				6222EDB11600FD4600F17058 /* Foundation.framework in Frameworks */,
 				6222EDB31600FD4600F17058 /* CoreGraphics.framework in Frameworks */,
@@ -76,6 +85,8 @@
 		6222EDAD1600FD4600F17058 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				625F5316161CED1600304E2B /* CoreLocation.framework */,
+				625F5310161CD45E00304E2B /* MapKit.framework */,
 				6222EDAE1600FD4600F17058 /* UIKit.framework */,
 				6222EDB01600FD4600F17058 /* Foundation.framework */,
 				6222EDB21600FD4600F17058 /* CoreGraphics.framework */,
@@ -91,13 +102,15 @@
 				6222EDC01600FD4600F17058 /* MainStoryboard.storyboard */,
 				6222EDCB1600FDD800F17058 /* iQuakeTableViewController.h */,
 				6222EDCC1600FDD800F17058 /* iQuakeTableViewController.m */,
-				6222EDC31600FD4600F17058 /* iQuakeViewController.h */,
-				6222EDC41600FD4600F17058 /* iQuakeViewController.m */,
+				625F5318161CF29A00304E2B /* iQuakeDetailTableViewController.h */,
+				625F5319161CF29A00304E2B /* iQuakeDetailTableViewController.m */,
 				6222EDB51600FD4600F17058 /* Supporting Files */,
 				6222EDCE160101E100F17058 /* iQuakeFetcher.h */,
 				6222EDCF160101E100F17058 /* iQuakeFetcher.m */,
 				6222EDD51601071A00F17058 /* iQuakeXMLParser.h */,
 				6222EDD61601071A00F17058 /* iQuakeXMLParser.m */,
+				625F530C161CD2CA00304E2B /* EarthQuake.h */,
+				625F530D161CD2CA00304E2B /* EarthQuake.m */,
 			);
 			path = iQuake;
 			sourceTree = "<group>";
@@ -178,10 +191,11 @@
 			files = (
 				6222EDBB1600FD4600F17058 /* main.m in Sources */,
 				6222EDBF1600FD4600F17058 /* iQuakeAppDelegate.m in Sources */,
-				6222EDC51600FD4600F17058 /* iQuakeViewController.m in Sources */,
 				6222EDCD1600FDD800F17058 /* iQuakeTableViewController.m in Sources */,
 				6222EDD0160101E100F17058 /* iQuakeFetcher.m in Sources */,
 				6222EDD71601071A00F17058 /* iQuakeXMLParser.m in Sources */,
+				625F530E161CD2CA00304E2B /* EarthQuake.m in Sources */,
+				625F531A161CF29A00304E2B /* iQuakeDetailTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +307,7 @@
 				6222EDCA1600FD4600F17058 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

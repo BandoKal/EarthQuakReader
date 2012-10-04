@@ -30,4 +30,95 @@
 
 @implementation iQuakeXMLParser
 
+-(iQuakeXMLParser*)initXMLParser
+{
+    if (self = [super init])
+    {
+        appDelegate = (iQuakeAppDelegate*)[[UIApplication sharedApplication]delegate];
+        appDelegate.xmlArray = [[NSMutableArray alloc]init];
+    }
+    
+    return self;
+}
+
+// searches for opening tags <...>
+// alloc and init aParseObject for the particular type of object you are using
+// tags need to be unique! otherwise aParseObject could be inited as something else (broken parser)
+- (void)parser:(NSXMLParser*)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict
+{
+    // What on earth do all these parameters contain!?!?
+    // elementName --> the tag < XXXX >
+    // attributeDict --> attributes of a tag < XXXX label = YYY term = ZZZ>
+    // those are the two we are interested in
+    
+    // Now what do we do when we encounter a start tag for Entry?
+    
+    if ([elementName isEqualToString:@"entry"])
+    {
+        // We know that if we see an entry tag then we have an earthquake!
+        // So allocate and initialize the generic parse object to type EarthQuake.
+        aParseObject = [[EarthQuake alloc]init];
+    }
+    else if ([elementName isEqualToString:@"category"])
+    {
+        //look for age first
+        if ([[attributeDict objectForKey:@"label"] isEqualToString:@"Age"])
+        {
+            [(EarthQuake*)aParseObject setAge:[attributeDict objectForKey:@"term"]];
+        }
+        else if ([[attributeDict objectForKey:@"label"] isEqualToString:@"Magnitude"])
+        {
+            [(EarthQuake*)aParseObject setMagnitude:[attributeDict objectForKey:@"term"]];
+        }
+        
+    }
+    else
+    {
+        currentElementValue = nil; // ******* Need explaination **********
+    }
+}
+
+
+// adds value to the currentElementValue from data within opening and closing tags
+- (void)parser:(NSXMLParser*)parser foundCharacters:(NSString *)string
+{
+    NSString *newString = [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    
+    if(!currentElementValue)
+        currentElementValue = [[NSMutableString alloc] initWithString:newString];
+    else
+        [currentElementValue appendString:newString];
+}
+
+
+
+// searches for closing tags </...>
+// when the closing tag for the object you'd use aParsObject... to access data in aParseObject --> [(ClassName*)aParseObject getMethod]
+- (void)parser:(NSXMLParser*)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName
+{
+    // Ok now we are in the main course!
+    
+    if ([elementName isEqualToString:@"entry"])
+    {
+        if (aParseObject)
+        {
+            // add the earth quake to the datasource
+            [appDelegate.xmlArray addObject:aParseObject];
+        }
+        
+        aParseObject = nil; // Don't forget to reset the parse object
+    }
+    else if ([elementName isEqualToString:@"georss:point"])
+    {
+        [(EarthQuake*)aParseObject setGeoPoint:currentElementValue];
+    }
+    @try {
+        [aParseObject setValue:currentElementValue forKey:elementName];
+    }
+    @catch (NSException *exception) {
+//        NSLog(@"Exception occured [%@]", exception.debugDescription);
+    }
+
+}
+
 @end

@@ -29,8 +29,19 @@
 #import <UIKit/UIKit.h>
 #import "iQuakeXMLParser.h"
 
+@class iQuakeFetcher;
+@protocol DataFetcherProtocol <NSObject>
+@required
+-(void)updateUIWithSender:(id)sender;
+-(void)errorWithError: (NSError*) error;
+
+@end
+
 @interface iQuakeFetcher : NSObject
 
--(NSArray*)fetchFeedsWithURL: (NSString*) urlPath;
+@property (assign)id<DataFetcherProtocol> delegate;
+@property (nonatomic, strong) NSArray *currentQuakes;
+
+-(void)fetchFeedsWithURL: (NSString*) urlPath;
 
 @end
