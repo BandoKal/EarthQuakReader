@@ -74,7 +74,7 @@
     }
     else
     {
-        currentElementValue = nil; // ******* Need explaination **********
+        currentElementValue = nil; // We need to reset the generic object 
     }
 }
 
@@ -112,10 +112,19 @@
     {
         [(EarthQuake*)aParseObject setGeoPoint:currentElementValue];
     }
+    
+    // We set the next method in a try catch block. The reason is becuase we are using the setValue:forKey: method
     @try {
+        // What is this method doing?
+        // In Objective-C we can treat classes and their Properties like a Hashmap!
+        // The keys are the properties and their values are generic objects.
+        // So here we tell aParseObject (remember is an EarthQuake object)
+        // go into your class and find the property with that is called "elementName"
+        // and set its value of "currentElementValue"
         [aParseObject setValue:currentElementValue forKey:elementName];
     }
     @catch (NSException *exception) {
+        // We catch if there is a tag in the xml that we do not have a property for.
 //        NSLog(@"Exception occured [%@]", exception.debugDescription);
     }
 

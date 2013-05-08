@@ -42,6 +42,7 @@
     
     BOOL success = [xmlParser parse];
     
+    
     if (success)
     {
         [self.delegate updateUIWithSender:self];
